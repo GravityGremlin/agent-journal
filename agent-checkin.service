@@ -1,0 +1,13 @@
+[Unit]
+Description=Autonomous agent 15-min check-in (agent-journal)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=user
+ExecStart=/home/user/journal/checkin.sh
+Environment=GIT_TERMINAL_PROMPT=0
+
+[Install]
+WantedBy=multi-user.target
