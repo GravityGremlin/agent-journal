@@ -2,6 +2,7 @@
 # Agent self-monitoring: verify the full stack is alive and reporting.
 # Run manually or via cron; writes status into journal repo and pushes.
 set -uo pipefail
+export PATH="/home/user/.local/bin:/usr/local/bin:/usr/bin:/bin"
 JOURNAL=/home/user/journal
 cd "$JOURNAL" || exit 1
 TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -17,7 +18,10 @@ check "cron has checkin entry"    "crontab -l 2>/dev/null | grep -q checkin"
 check "systemd timer active"      "systemctl --user is-active agent-checkin.timer || sudo -n systemctl is-active agent-checkin.timer"
 check "disk > 2GB"                "[ \$(df -k / | awk 'NR==2{print \$4}') -gt 2097152 ]"
 check "network up"                "curl -s -m 10 -o /dev/null -w '%{http_code}' https://api.github.com | grep -q 200"
-check "github token valid"        "curl -s -m 10 -H \"Authorization: Bearer $GITHUB_TOKEN\" https://api.github.com/user | grep -q GravityGremlin"
+# Token lives in the remote URL (x-access-token) — reuse it for the API check.
+REMOTE=$(git remote get-url origin)
+TOK=$(echo "$REMOTE" | sed -n 's#.*x-access-token:\([^@]*\)@.*#\1#p')
+check "github token valid"        "curl -s -m 10 -H \"Authorization: Bearer $TOK\" https://api.github.com/user | grep -q GravityGremlin"
 
 {
   echo ""

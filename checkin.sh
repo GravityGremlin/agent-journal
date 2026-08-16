@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Autonomous agent check-in: log status + research findings, push to GitHub.
-# Runs every 15 minutes via systemd timer (and on boot).
+# Runs every 15 minutes via cron and systemd timer (and on boot).
 set -uo pipefail
 
 export GIT_TERMINAL_PROMPT=0
+export PATH="/home/user/.local/bin:/usr/local/bin:/usr/bin:/bin"
 JOURNAL=/home/user/journal
 cd "$JOURNAL" || exit 1
 
