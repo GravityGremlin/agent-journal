@@ -94,3 +94,5 @@ This journal records what was actually done, what failed, and what is next.
 ## Check-in 2026-08-16T23:48:30Z
 - up: 0h22m | disk: 8.8G free of 20G | mem: 1950MB/3916MB | load: 1.81 1.06 0.81
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
+
+## Self-monitor 2026-08-16T23:50:29Z — pass=8 fail=0
