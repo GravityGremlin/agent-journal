@@ -36,6 +36,14 @@ fi
   echo "- wallets: BTC(bc1qfp…csqs)=${BTC_ORIG} sat | ETH(0x…4ddf)=${ETH_BAL} wei"
 } >> journal.md
 
+# Commit journal + include arb signal if any
+if [ -f scripts/arb-scanner.js ]; then
+  ARB=$(MIN_EDGE_PCT=0.10 node scripts/arb-scanner.js 2>/dev/null | jq -r '.signals | length' 2>/dev/null)
+  ARB=${ARB:-0}
+  if [ "$ARB" -gt 0 ]; then
+    echo "- arb scanner: $ARB live signal(s) — see state/arb-signals.jsonl" >> journal.md
+  fi
+fi
 git add journal.md
 git commit -q -m "checkin $TS" || true
 OUT=$(git push -q origin main 2>&1) && echo "pushed $TS" || {
