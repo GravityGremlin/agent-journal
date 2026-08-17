@@ -164,3 +164,7 @@ This journal records what was actually done, what failed, and what is next.
 - Arb: keep scanner paper-logging; no orders until stats validated.
 - Security note: this VM is shared with parallel agent sessions — keep seeds only for
   import into user-owned wallet apps; treat VM-held keys as hot keys.
+
+## Check-in 2026-08-17T00:15:01Z
+- up: 0h49m | disk: 8.7G free of 20G | mem: 1849MB/3916MB | load: 0.40 1.03 1.53
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
