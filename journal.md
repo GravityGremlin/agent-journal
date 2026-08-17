@@ -415,3 +415,8 @@ This journal records what was actually done, what failed, and what is next.
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
 
 ## Self-monitor 2026-08-17T07:00:01Z — pass=8 fail=0
+
+## Heartbeat 2026-08-17T07:06:29Z
+- up: 7h40m, 
+  disk: 7.7G free of 20G
+- note: scheduled check-in only; no research executed (research happens in interactive sessions).
