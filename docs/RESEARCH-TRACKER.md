@@ -1,4 +1,4 @@
-# Research Tracker — Live Findings (updated 2026-08-16)
+# Research Tracker — Live Findings (updated 2026-08-17)
 
 Sources: direct fetches (immunefi.com, airdrops.io). Updated on check-ins when new
 research is executed. Findings below are live as of fetch time.
@@ -30,3 +30,9 @@ research is executed. Findings below are live as of fetch time.
       airdrops.io testnet tag + project docs).
 - [ ] Pick top 3 confirmed campaigns, evaluate participation cost vs. expected value.
 - [ ] Build crawler script to auto-pull airdrops.io daily into this tracker.
+- [ ] Cross-check `oritwoen/boha` collection index against open-crypto-puzzles map
+      (2026-08-17 platform scan; boha tracks b1000/arweave/bitaps/bitimage/gsmg/
+      hash_collision/rushwallet/zden/ballet/warp — confirm we carry every still-
+      unsolved lot with funded escrow).
+- [ ] Verify lowest feasible b1000 known-pubkey puzzle on this VM's compute budget
+      (Pollard Kangaroo util; 135+ is GPU-scale, note that in EV math).
