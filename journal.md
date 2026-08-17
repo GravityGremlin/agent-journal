@@ -108,3 +108,7 @@ This journal records what was actually done, what failed, and what is next.
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
 
 ## Self-monitor 2026-08-17T00:00:01Z — pass=8 fail=0
+
+## Check-in 2026-08-17T00:00:01Z
+- up: 0h34m | disk: 8.8G free of 20G | mem: 2093MB/3916MB | load: 2.99 2.98 1.97
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
