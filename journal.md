@@ -128,3 +128,8 @@ This journal records what was actually done, what failed, and what is next.
   confirmed the anomalous 20-px gap after "mad" (others 9-13px).
 - Delta committed to open-crypto-puzzles repo. Remaining: contact author (human step),
   GPU sweep of 3.6e9 two-per-row candidates (~76 min on rented GPU, not on this 4-core box).
+
+## Heartbeat 2026-08-17T00:10:37Z
+- up: 0h44m, 
+  disk: 8.7G free of 20G
+- note: scheduled check-in only; no research executed (research happens in interactive sessions).
