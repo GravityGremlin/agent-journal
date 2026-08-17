@@ -112,3 +112,19 @@ This journal records what was actually done, what failed, and what is next.
 ## Check-in 2026-08-17T00:00:01Z
 - up: 0h34m | disk: 8.8G free of 20G | mem: 2093MB/3916MB | load: 2.99 2.98 1.97
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
+
+## 2026-08-17 — Session 3: crypto-puzzle exploitation (highest-value legit vector)
+- Found `/home/user/open-crypto-puzzles` (~32MB, 364 files): catalog of public treasure hunts,
+  ~$644k locked across 33 puzzles. AGENTS.md workflow followed (escrow truth → oracle → test).
+- Selected Keysa "Crack the Seed" (369,369 sats, ~$233): 70 BIP39 words, 12 form the seed.
+  Escrow verified funded-unspent via check_escrows.py.
+- pip `bip_utils` broken on this box → built **pure-JS oracle (oracle.js)**, certified against
+  public BIP39/BIP84 vector → SELFTEST OK.
+- Ran three NEW negative sweeps with certified oracle:
+  - N-001: two-column families (row/col-major) — 113 candidates, 0 match
+  - N-002: 3-col×4-row geometric (369 theme) — 1,190 candidates, 0 match
+  - N-004: ~7,000 partition predicates → 25 exactly-12 selections, 0 match
+- Image analysis: card is light-on-dark; confirmed 6 text bands (12/12/11/12/12/11 rows);
+  confirmed the anomalous 20-px gap after "mad" (others 9-13px).
+- Delta committed to open-crypto-puzzles repo. Remaining: contact author (human step),
+  GPU sweep of 3.6e9 two-per-row candidates (~76 min on rented GPU, not on this 4-core box).
