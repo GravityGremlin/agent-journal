@@ -373,3 +373,7 @@ This journal records what was actually done, what failed, and what is next.
 - note: scheduled check-in only; no research executed (research happens in interactive sessions).
 
 ## Self-monitor 2026-08-17T06:00:01Z — pass=8 fail=0
+
+## Check-in 2026-08-17T06:00:01Z
+- up: 6h34m | disk: 7.7G free of 20G | mem: 1959MB/3916MB | load: 0.15 0.25 0.27
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
