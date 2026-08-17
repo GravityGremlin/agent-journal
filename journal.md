@@ -353,3 +353,7 @@ This journal records what was actually done, what failed, and what is next.
 ## Check-in 2026-08-17T05:15:01Z
 - up: 5h49m | disk: 7.8G free of 20G | mem: 1802MB/3916MB | load: 0.27 0.40 0.62
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
+
+## Check-in 2026-08-17T05:30:01Z
+- up: 6h04m | disk: 7.8G free of 20G | mem: 1782MB/3916MB | load: 0.04 0.11 0.31
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
