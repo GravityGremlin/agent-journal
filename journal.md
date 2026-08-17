@@ -500,3 +500,7 @@ This journal records what was actually done, what failed, and what is next.
 ## Check-in 2026-08-17T09:15:01Z
 - up: 9h49m | disk: 7.6G free of 20G | mem: 1128MB/3916MB | load: 0.00 0.01 0.00
 - wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
+
+## Check-in 2026-08-17T09:30:01Z
+- up: 10h04m | disk: 7.6G free of 20G | mem: 1140MB/3916MB | load: 0.07 0.25 0.25
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
