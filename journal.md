@@ -547,3 +547,7 @@ This journal records what was actually done, what failed, and what is next.
 - up: 11h08m, 
   disk: 7.6G free of 20G
 - note: scheduled check-in only; no research executed (research happens in interactive sessions).
+
+## Check-in 2026-08-17T10:45:01Z
+- up: 11h19m | disk: 7.6G free of 20G | mem: 1145MB/3916MB | load: 0.00 0.00 0.00
+- wallets: BTC(bc1qfp…csqs)=0 sat | ETH(0x…4ddf)=0.0 wei
