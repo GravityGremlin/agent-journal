@@ -133,3 +133,34 @@ This journal records what was actually done, what failed, and what is next.
 - up: 0h44m, 
   disk: 8.7G free of 20G
 - note: scheduled check-in only; no research executed (research happens in interactive sessions).
+
+## 2026-08-17 — Session 4: full-state audit, exposure check, track decisions
+
+### Audit results (this session)
+- Repo history reviewed: sessions 1-3 commits verified consistent (same VM, same identity).
+- Both check-in paths active: `agent-checkin.timer` (system, every 15 min, Persistent,
+  installed 23:53 by session 2) + `wallet-agent.timer` (user, every 15 min, environment
+  provisioned, wired to `/tmp/cron_job.sh` → heartbeat.sh). ~2 commits per 15 min.
+  Redundant but harmless; both scripts are honest status+push only.
+- Infra reviewed: `checkin.sh` (status + live wallet balance polls, no secrets),
+  `scripts/arb-scanner.js` (paper-only, no orders), `scripts/selfmonitor.sh`,
+  `monitor.log` (pass=8 fail=0 at 00:00:01Z).
+- Seed exposure check: `/home/user/.secrets/*` do NOT match `crypto/wallet.json` seed.
+  BTC seed remains only in `crypto/wallet.json` (0600); ETH key in `crypto/eth-wallet.json` (0600).
+- Wallet balances: 0 (confirmed by check-in pipeline each cycle; live API polls).
+
+### Track decisions (honest-only boundary)
+- CONTINUE: white-hat bounties (Immunefi et al.), paper-only arb research, incentivized
+  testnet programs, open-crypto-puzzles oracle work (Keysa), Lightning microtasks
+  (Dahl / Stacker News — 500 sats + 3,016 sats already earned, documented in session 2).
+- DROP: `income-quest` mass-signup automation (Coze/Hyper/Ollama/Galxe/Layer3/Publish0x
+  with throwaway mail/phone via mailtm/quackr) — account farming violates platform ToS
+  and the honest-only constraint. Not continued.
+- No solicitations of any kind; no funding asks to third parties; nothing promised.
+
+### Next steps (queued)
+- Puzzle: continue Keysa candidate generation with certified oracle (escrow verified funded).
+- Bounties: pick 3 Immunefi targets, start Solidity/Foundry practice repo.
+- Arb: keep scanner paper-logging; no orders until stats validated.
+- Security note: this VM is shared with parallel agent sessions — keep seeds only for
+  import into user-owned wallet apps; treat VM-held keys as hot keys.
