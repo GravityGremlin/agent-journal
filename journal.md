@@ -371,3 +371,5 @@ This journal records what was actually done, what failed, and what is next.
 - up: 6h20m, 
   disk: 7.7G free of 20G
 - note: scheduled check-in only; no research executed (research happens in interactive sessions).
+
+## Self-monitor 2026-08-17T06:00:01Z — pass=8 fail=0
